@@ -31,7 +31,12 @@ thead th { position: sticky; top: 0; background: var(--pico-background-color); }
 .badge-none { background: #eaeef2; color: #57606a; }
 .badge-value { background: #ddf4ff; color: #0969da; }
 .wpt-legend { font-size: 0.85em; color: var(--pico-muted-color); }
-.section-desc { color: var(--pico-muted-color); font-size: 0.9em; }
+.feature-desc { font-size: 0.9em; color: var(--pico-muted-color); margin: 0.2rem 0 0.5rem; }
+.transition-desc { font-size: 0.9em; color: var(--pico-muted-color); }
+.section-desc {
+  padding: 0.6rem 0.9rem; border-left: 4px solid var(--pico-primary);
+  background: var(--pico-card-sectioning-background-color); border-radius: 0 0.25rem 0.25rem 0;
+}
 @media (prefers-color-scheme: dark) {
   .badge-good { background: #113221; color: #56d364; }
   .badge-warn { background: #3b2900; color: #e3b341; }
@@ -72,8 +77,8 @@ thead th { position: sticky; top: 0; background: var(--pico-background-color); }
 </div>
 </section>
 <h2>ニュース素材</h2>
-<p class="section-desc">各ソースで検知した更新を、対応付けられた機能ごとに整理したものです。見出しの「未確認」は、区分E（ニュース記事など）だけで検知され、他の情報源では裏付けが取れていないことを示します。</p>
-<section class="news-category"><h3>A 仕様策定</h3><div class="news-feature"><h4>dynamic-range-limit</h4><ul class="news-items"><li>新規追加</li>
+<p class="section-desc">各ソースで検知した更新を、情報源の区分（A〜E）と対応付けられた機能ごとに整理したものです。機能名の下の英語の説明文は web-features の公式説明です。リンクの無い行（「新規追加」「Safari 27 で実装」「WPT Safari: 86% → 94%」など）はその日に確定した状態の変化で、「—」以降はその変化の日本語での解説、リンク付きの行は検知元の更新です。見出しの「未確認」は、区分E（ニュース記事など）だけで検知され、他の情報源では裏付けが取れていないことを示します。</p>
+<section class="news-category"><h3>A 仕様策定</h3><p class="section-desc">W3C・WHATWG・WICG などの仕様リポジトリ、W3C TR の新着、W3C TAG のデザインレビュー、ARIA 関連リポジトリで検知した更新です。</p><div class="news-feature"><h4>dynamic-range-limit</h4><ul class="news-items"><li>新規追加</li>
 <li><a href="https://github.com/w3c/webref/pull/2061" rel="noopener noreferrer">[w3c/webref] 📦 Release @webref/css@8.7.5</a> <span class="badge badge-value">w3c-org-prs</span></li>
 <li><a href="https://github.com/w3c/webref/pull/2062" rel="noopener noreferrer">[w3c/webref] 📦 Release @webref/css6@6.25.16</a> <span class="badge badge-value">w3c-org-prs</span></li></ul></div>
 <div class="news-feature"><h4>Global privacy control</h4><ul class="news-items"><li>新規追加</li>
@@ -81,11 +86,11 @@ thead th { position: sticky; top: 0; background: var(--pico-background-color); }
 <li><a href="https://www.w3.org/TR/gpc/" rel="noopener noreferrer">Global Privacy Control (GPC): 新しい版を公開</a> <span class="badge badge-value">w3c-tr</span></li></ul></div>
 <div class="news-feature"><h4>&lt;install&gt;</h4><ul class="news-items"><li>新規追加</li>
 <li><a href="https://github.com/WICG/install-element/pull/35" rel="noopener noreferrer">[WICG/install-element] Clarify inherited members and developer diagnostics</a> <span class="badge badge-value">wicg-org-prs</span></li></ul></div></section>
-<section class="news-category"><h3>B ベンダーの動き</h3><div class="news-feature"><h4>Permissions policy</h4><ul class="news-items"><li>新規追加</li>
+<section class="news-category"><h3>B ベンダーの動き</h3><p class="section-desc">Chrome Platform Status への登録・実装意向と、Mozilla・WebKit の standards-positions（標準化への立場）で検知した更新です。</p><div class="news-feature"><h4>Permissions policy</h4><ul class="news-items"><li>新規追加</li>
 <li><a href="https://chromestatus.com/feature/5073502741856256" rel="noopener noreferrer">ChromeStatus に登録: Permissions Policy for dedicated and shared workers</a> <span class="badge badge-value">chromestatus</span></li></ul></div>
 <div class="news-feature"><h4>Screen capture</h4><ul class="news-items"><li>新規追加</li>
 <li><a href="https://chromestatus.com/feature/5090039641014272" rel="noopener noreferrer">ChromeStatus に登録: MediaTrackConstraintSet.cursor for getDisplayMedia</a> <span class="badge badge-value">chromestatus</span></li></ul></div></section>
-<section class="news-category"><h3>C 互換データ</h3><div class="news-feature"><h4>&lt;a&gt;</h4><ul class="news-items"><li>新規追加</li>
+<section class="news-category"><h3>C 互換データ</h3><p class="section-desc">web-features・BCD（@mdn/browser-compat-data）・webstatus.dev の WPT スコア・ARIA-AT などの一次データの変化です。実装状況・WPT・ARIA の表の値は、この区分のデータだけから作っています。</p><div class="news-feature"><h4>&lt;a&gt;</h4><ul class="news-items"><li>新規追加</li>
 <li><a href="https://webstatus.dev/features/a" rel="noopener noreferrer">&lt;a&gt;: wpt スコア変化（chrome: 0.941 → 1）</a> <span class="badge badge-value">webstatus-wpt</span></li></ul></div>
 <div class="news-feature"><h4>alpha()</h4><ul class="news-items"><li>新規追加</li>
 <li><a href="https://webstatus.dev/features/alpha" rel="noopener noreferrer">alpha(): safari 未対応 → 27</a> <span class="badge badge-value">web-features</span></li>
