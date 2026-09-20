@@ -32,6 +32,8 @@ thead th { position: sticky; top: 0; background: var(--pico-background-color); }
 .badge-value { background: #ddf4ff; color: #0969da; }
 .wpt-legend { font-size: 0.85em; color: var(--pico-muted-color); }
 .feature-desc { font-size: 0.9em; color: var(--pico-muted-color); margin: 0.2rem 0 0.5rem; }
+.feature-desc--source { font-size: 0.8em; }
+.mt-note { color: var(--pico-muted-color); font-weight: normal; }
 .transition-desc { font-size: 0.9em; color: var(--pico-muted-color); }
 .section-desc {
   padding: 0.6rem 0.9rem; border-left: 4px solid var(--pico-primary);
@@ -59,12 +61,13 @@ thead th { position: sticky; top: 0; background: var(--pico-background-color); }
 <details class="dropdown">
 <summary>全日付</summary>
 <ul>
+<li><a href="2026-09-20.html">2026-09-20</a></li>
 <li><a href="2026-09-19.html" aria-current="page">2026-09-19</a></li>
 <li><a href="2026-09-18.html">2026-09-18</a></li>
 </ul>
 </details>
 </li>
-
+<li><a href="2026-09-20.html" rel="next">翌日 →</a></li>
 </ul>
 </nav>
 </header>
@@ -78,7 +81,7 @@ thead th { position: sticky; top: 0; background: var(--pico-background-color); }
 </div>
 </section>
 <h2>ニュース素材</h2>
-<p class="section-desc">各ソースで検知した更新を、情報源の区分（A〜E）と対応付けられた機能ごとに整理したものです。機能名の下の英語の説明文は web-features の公式説明です。リンクの無い行（「新規追加」「Safari 27 で実装」「WPT Safari: 86% → 94%」など）はその日に確定した状態の変化で、「—」以降はその変化の日本語での解説、リンク付きの行は検知元の更新です。見出しの「未確認」は、区分E（ニュース記事など）だけで検知され、他の情報源では裏付けが取れていないことを示します。</p>
+<p class="section-desc">各ソースで検知した更新を、情報源の区分（A〜E）と対応付けられた機能ごとに整理したものです。見出し直下は機能の概要（web-features の説明文）で、日本語訳があれば機械翻訳を先に、その下に英語の原文を示します（訳が無ければ原文のみ）。リンクの無い行（「新規追加」「Safari 27 で実装」「WPT Safari: 86% → 94%」など）はその日に確定した状態の変化で、「—」以降はその変化の日本語での解説、リンク付きの行は検知元の更新です。見出しの「未確認」は、区分E（ニュース記事など）だけで検知され、他の情報源では裏付けが取れていないことを示します。</p>
 <section class="news-category"><h3>A 仕様策定</h3><p class="section-desc">W3C・WHATWG・WICG などの仕様リポジトリ、W3C TR の新着、W3C TAG のデザインレビュー、ARIA 関連リポジトリで検知した更新です。</p><div class="news-feature"><h4>:focus-visible</h4><p class="feature-desc" lang="en">The :focus-visible CSS pseudo-class selects elements that match the :focus pseudo-class and meets the browser&#39;s criteria for visually emphasizing focused elements.</p><ul class="news-items"><li><strong>新規追加</strong> <span class="transition-desc">この日に Tommy の追跡対象へ新しく加わった機能です。下の更新は追加と同時に検知したものです。</span></li>
 <li><a href="https://github.com/w3c/csswg-drafts/pull/14510" rel="noopener noreferrer">[w3c/csswg-drafts] [selectors-4][editorial] Typo</a> <span class="badge badge-value">w3c-org-prs</span></li></ul></div>
 <div class="news-feature"><h4>&lt;install&gt;</h4><p class="feature-desc" lang="en">The &lt;install&gt; HTML element represents a button that, upon activation, prompts the user to choose whether to install a progressive web app.</p><ul class="news-items"><li><a href="https://github.com/WICG/install-element/pull/33" rel="noopener noreferrer">[WICG/install-element] [Spec] general edits</a> <span class="badge badge-value">wicg-org-prs</span></li></ul></div></section>
